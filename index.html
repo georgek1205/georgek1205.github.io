@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Seunggyu Kim</title>
+  <meta name="description" content="Seunggyu Kim — integrated M.S.–Ph.D. student at AIM Lab, Sungkyunkwan University. Multimodal learning, video understanding, efficiency." />
+  <meta property="og:title" content="Seunggyu Kim" />
+  <meta property="og:description" content="Integrated M.S.–Ph.D. student at AIM Lab, Sungkyunkwan University." />
+  <meta property="og:type" content="website" />
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+
+  <!-- Fonts: Geist (Latin) + Geist Mono (labels) + Pretendard (Hangul) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@300..700&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css" rel="stylesheet" />
+
+  <!-- Icons (envelope, LinkedIn) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+
+  <link rel="stylesheet" href="assets/style.css" />
+</head>
+<body>
+  <!-- Top menu -->
+  <header class="topbar" id="topbar">
+    <div class="topbar__inner">
+      <a class="brand" href="#top" id="brand"></a>
+      <nav class="menu" id="menu" aria-label="Sections"></nav>
+    </div>
+  </header>
+
+  <div class="page">
+    <section class="hero" id="top">
+      <figure class="hero__photo" id="hero-photo"></figure>
+      <div class="hero__head">
+        <h1 class="hero__name">
+          <span id="hero-name"></span>
+          <span class="hero__name-local" id="hero-name-local"></span>
+        </h1>
+        <p class="eyebrow" id="hero-eyebrow"></p>
+      </div>
+      <div class="hero__body">
+        <p class="hero__tagline" id="hero-tagline"></p>
+        <ul class="chips" id="hero-links"></ul>
+      </div>
+    </section>
+
+    <main>
+      <section class="sec" id="about" data-label="About">
+        <h2 class="sec__title"><span class="num"></span>About</h2>
+        <div class="prose" id="about-body"></div>
+        <div class="interests">
+          <p class="mini">Research interests</p>
+          <ul class="tags" id="interests"></ul>
+        </div>
+      </section>
+
+      <section class="sec" id="news" data-label="News">
+        <h2 class="sec__title"><span class="num"></span>News</h2>
+        <ol class="news" id="news-list"></ol>
+        <button class="more" id="news-more" type="button" hidden></button>
+      </section>
+
+      <section class="sec" id="education" data-label="Education">
+        <h2 class="sec__title"><span class="num"></span>Education</h2>
+        <ul class="entries" id="education-list"></ul>
+      </section>
+
+      <section class="sec" id="projects" data-label="Projects">
+        <h2 class="sec__title"><span class="num"></span>Projects</h2>
+        <ul class="entries" id="project-list"></ul>
+      </section>
+
+      <section class="sec" id="publications" data-label="Publications">
+        <h2 class="sec__title"><span class="num"></span>Publications</h2>
+        <div class="pub-toolbar" id="pub-toolbar">
+          <div class="seg" role="tablist" aria-label="Filter publications">
+            <button role="tab" data-filter="selected" aria-selected="true">Selected</button>
+            <button role="tab" data-filter="all" aria-selected="false">All</button>
+          </div>
+          <p class="mini legend"><span class="me-mark">Name</span> = me &nbsp;·&nbsp; * equal contribution</p>
+        </div>
+        <ol class="pubs" id="pub-list"></ol>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <span id="footer-copy"></span>
+      <span class="mini" id="footer-updated"></span>
+    </footer>
+  </div>
+
+  <!-- Image viewer for project thumbnails -->
+  <dialog class="viewer" id="viewer" aria-label="Image preview">
+    <img id="viewer-img" alt="" />
+    <p class="viewer__hint">Click anywhere to close</p>
+  </dialog>
+
+  <!-- Edit your content here ↓ -->
+  <script src="content.js"></script>
+  <script src="assets/main.js"></script>
+</body>
+</html>
